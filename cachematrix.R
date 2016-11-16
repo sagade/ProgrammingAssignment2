@@ -7,7 +7,7 @@
 #' 
 #' @param x a numeric matrix. Default to 1x1 matrix with NA
 #' 
-#' @return a list with the functions set(y), get(), setinverse(inverse) and getinverse()
+#' @return a list with the functions \code{set(y)}, \code{get()}, \code{setinverse(inverse)} and \code{getinverse()}
 makeCacheMatrix <- function(x = matrix()) {
   
   inv <- NULL
@@ -31,14 +31,14 @@ makeCacheMatrix <- function(x = matrix()) {
 
 #' Function to calculate the inverse for a matrix with cached inverse.
 #' 
-#' If the inverse is calculated the first time the R standard function \link{\code{solve}} is used and the
-#' result is cached in the matrix object created by \link{\code{makeCacheMatrix}}. If the function is called 
+#' If the inverse is calculated the first time the R standard function \code{\link{solve}} is used and the
+#' result is cached in the matrix object created by \code{\link{makeCacheMatrix}}. If the function is called 
 #' on again on the same object the inverse is not calculated but the cached inverse matrix is returned.
 #' 
-#' @param x matrix object create with \link{\code{makeCacheMatrix}}
-#' @param ... further arguments to \link{\code{solve}}
+#' @param x matrix object create with \code{\link{makeCacheMatrix}}
+#' @param ... further arguments to \code{\link{solve}}
 #' 
-#' @return the inverse of x
+#' @return the inverse of \code{x}
 #' 
 #' @example 
 #' testmat <- makeCacheMatrix(diag(10))
